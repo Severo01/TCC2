@@ -7,16 +7,17 @@ TagManager:
   - Colisor
   - Sensor
   - "ch\xE3o"
+  - PlayerBehaviour
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - "Ch\xE3o"
+  - Ground
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Avalanche
+  - Player
+  - Coletores
   - 
   - 
   - 
