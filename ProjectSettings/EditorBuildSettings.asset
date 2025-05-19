@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: f06a6f88e3d531441a4aa2be6c753fc8
+  - enabled: 1
+    path: Assets/Scenes/Outono.unity
+    guid: 6a02288541ee28942bdf972102c3c2a7
+  - enabled: 1
+    path: Assets/Scenes/Inverno2.unity
+    guid: 6dab6e95b63161548a41acbfe8f6d0f2
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects:
