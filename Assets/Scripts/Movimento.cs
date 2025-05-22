@@ -26,9 +26,9 @@ public class Movimento : MonoBehaviour
 
         // Movimento lateral
         float moveX = Input.GetAxis("Horizontal");
-        Vector3 newVelocity = rb.linearVelocity;
+        Vector3 newVelocity = rb.velocity;
         newVelocity.x = moveX * moveSpeed;
-        rb.linearVelocity = newVelocity;
+        rb.velocity = newVelocity;
 
         // Animação para correr
         Vector3 direction = new Vector3(moveX, 0, 0);
