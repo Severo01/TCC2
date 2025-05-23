@@ -20,7 +20,6 @@ public class Movimento : MonoBehaviour
 
     void Update()
     {
-        // Verifica se o jogador está no chão
         bool wasGrounded = isGrounded;
         isGrounded = Physics.CheckSphere(groundCheck.position, groundCheckRadius, groundLayer);
 
@@ -36,7 +35,6 @@ public class Movimento : MonoBehaviour
         {
             animator.SetBool("correndo", true);
             transform.forward = Vector3.Slerp(transform.forward, direction, Time.deltaTime * 10);
-
         }
         else
         {
@@ -46,7 +44,7 @@ public class Movimento : MonoBehaviour
         // Pulo
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpForce, rb.linearVelocity.z);
+            rb.velocity = new Vector3(rb.velocity.x, jumpForce, rb.velocity.z);
         }
 
         // pulou
