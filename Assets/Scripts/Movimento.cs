@@ -20,15 +20,14 @@ public class Movimento : MonoBehaviour
 
     void Update()
     {
-        // Verifica se o jogador está no chão
         bool wasGrounded = isGrounded;
         isGrounded = Physics.CheckSphere(groundCheck.position, groundCheckRadius, groundLayer);
 
         // Movimento lateral
         float moveX = Input.GetAxis("Horizontal");
-        Vector3 newVelocity = rb.velocity;
+        Vector3 newVelocity = rb.linearVelocity;
         newVelocity.x = moveX * moveSpeed;
-        rb.velocity = newVelocity;
+        rb.linearVelocity = newVelocity;
 
         // Animação para correr
         Vector3 direction = new Vector3(moveX, 0, 0);
@@ -36,7 +35,6 @@ public class Movimento : MonoBehaviour
         {
             animator.SetBool("correndo", true);
             transform.forward = Vector3.Slerp(transform.forward, direction, Time.deltaTime * 10);
-
         }
         else
         {
