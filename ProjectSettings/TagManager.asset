@@ -8,6 +8,7 @@ TagManager:
   - Sensor
   - "ch\xE3o"
   - PlayerBehaviour
+  - Avalanche
   layers:
   - Default
   - TransparentFX
