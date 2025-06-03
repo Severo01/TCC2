@@ -4,10 +4,12 @@ public class PararNoCollider : MonoBehaviour
 {
     public GameObject objetoParaParar;
     private Rigidbody rb;
+    private Avalanche avalancheScript;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        avalancheScript = GetComponent<Avalanche>();
     }
 
     void OnCollisionEnter(Collision collision)
@@ -16,9 +18,11 @@ public class PararNoCollider : MonoBehaviour
         {
             Debug.Log("Colidiu com o objeto certo! Parando...");
             rb.linearVelocity = Vector3.zero;
-            rb.isKinematic = true;
+            avalancheScript.velocidade = 0f;
+            avalancheScript.podeSeguir = false;
         }
     }
+
 }
 
 

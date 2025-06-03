@@ -2163,6 +2163,7 @@ GameObject:
   m_Component:
   - component: {fileID: 425446854}
   - component: {fileID: 425446853}
+  - component: {fileID: 425446855}
   m_Layer: 0
   m_Name: Barreira
   m_TagString: Colisor
@@ -2180,12 +2181,12 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -2200,12 +2201,24 @@ Transform:
   m_GameObject: {fileID: 425446852}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 656.4, y: 28.98, z: 1}
+  m_LocalPosition: {x: 656.4, y: 28.98, z: 0.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &425446855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425446852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdb39e13590492944a57a217b2e1cc5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &449942492
 GameObject:
   m_ObjectHideFlags: 0
@@ -30645,7 +30658,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 187445724}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3ac6583df323b904c9dab37f4a7fd631, type: 3}
   m_Name: 
@@ -32302,6 +32315,10 @@ PrefabInstance:
       propertyPath: m_Size.z
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2862737760997819859, guid: 9afb57b2ec2f9bb48afb4ca797c0e2b7, type: 3}
+      propertyPath: m_IncludeLayers.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4100798860722275529, guid: 9afb57b2ec2f9bb48afb4ca797c0e2b7, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.6448
@@ -32371,8 +32388,16 @@ PrefabInstance:
       value: Avalanche
       objectReference: {fileID: 0}
     - target: {fileID: 9187016270492755326, guid: 9afb57b2ec2f9bb48afb4ca797c0e2b7, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9187016270492755326, guid: 9afb57b2ec2f9bb48afb4ca797c0e2b7, type: 3}
       propertyPath: m_CollisionDetection
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9187016270492755326, guid: 9afb57b2ec2f9bb48afb4ca797c0e2b7, type: 3}
+      propertyPath: m_IncludeLayers.m_Bits
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -32432,6 +32457,7 @@ SceneRoots:
   - {fileID: 200997800}
   - {fileID: 186711066}
   - {fileID: 8087688295987057830}
+  - {fileID: 425446854}
   - {fileID: 1997530720}
   - {fileID: 242758305}
   - {fileID: 4895810597217717854}
@@ -32444,7 +32470,6 @@ SceneRoots:
   - {fileID: 216287814}
   - {fileID: 449942496}
   - {fileID: 5941675866600464347}
-  - {fileID: 425446854}
   - {fileID: 761398731}
   - {fileID: 455078315}
   - {fileID: 924191709}
