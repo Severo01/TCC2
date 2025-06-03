@@ -12,14 +12,18 @@ public class InteractionTrigger : MonoBehaviour
             pressEMessage.SetActive(false);
     }
 
-    void Update()
+   void Update()
+{
+    if (playerInside && Input.GetKeyDown(KeyCode.E))
     {
-        if (playerInside && Input.GetKeyDown(KeyCode.E))
-        {
-            Debug.Log("E pressionado! Interação feita.");
-            // Aqui você pode colocar qualquer ação: abrir porta, pegar item etc.
-        }
+        Debug.Log("E pressionado! Interação feita.");
+        
+        if (pressEMessage != null)
+            pressEMessage.SetActive(false); // Esconde o texto ao pressionar E
+
     }
+}
+
 
     private void OnTriggerEnter(Collider other)
     {

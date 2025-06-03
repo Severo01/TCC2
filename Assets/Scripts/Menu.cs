@@ -7,6 +7,7 @@ public class MenuFuncoes : MonoBehaviour
     [Header("Menus")]
     [SerializeField] private GameObject MenuPrincipal;
     [SerializeField] private GameObject MenuOpcoes;
+    [SerializeField] private GameObject Créditos;
 
     [Header("Slider de Volume")]
     [SerializeField] private Slider sliderVolume;
@@ -38,17 +39,23 @@ public class MenuFuncoes : MonoBehaviour
 
     public void Jogar()
     {
-        SceneManager.LoadScene("Inverno2");
+        SceneManager.LoadScene("Outono");
     }
 
-    public void Outono()
+    public void créditos()
     {
-        SceneManager.LoadScene("Outono");
+        SceneManager.LoadScene("Creditos");
+    }
+
+    public void Inverno()
+    {
+        SceneManager.LoadScene("Inverno2");
     }
 
     public void SairJogo()
     {
-        SceneManager.LoadScene("Menu");
+         Debug.Log("Saindo do jogo...");
+        Application.Quit();
     }
 
     public void AbrirOpcoes()
