@@ -63,14 +63,16 @@ public class MenuFuncoes : MonoBehaviour
         MenuPrincipal.SetActive(true);
     }
 
-    public void AjustarVolume(float volume)
+    public void AjustarVolume()
     {
+        float volume = sliderVolume.value;
         // Evita zerar completamente
         if (volume < 0.05f)
             volume = 0.05f;
 
         AudioListener.volume = volume;
         PlayerPrefs.SetFloat("volume", volume); // Salva
+        Debug.Log("Novo Volume: " + PlayerPrefs.GetFloat("volume"));
     }
 
     // (Opcional) Botão para resetar configurações

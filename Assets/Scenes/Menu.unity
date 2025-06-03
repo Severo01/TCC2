@@ -150,6 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MenuPrincipal: {fileID: 131998547}
   MenuOpcoes: {fileID: 1050026733}
+  sliderVolume: {fileID: 1912705690}
 --- !u!4 &26288523
 Transform:
   m_ObjectHideFlags: 0
@@ -2525,7 +2526,7 @@ MonoBehaviour:
       - m_Target: {fileID: 26288522}
         m_TargetAssemblyTypeName: MenuFuncoes, Assembly-CSharp
         m_MethodName: AjustarVolume
-        m_Mode: 4
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
