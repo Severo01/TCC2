@@ -7,7 +7,6 @@ public class MenuFuncoes : MonoBehaviour
     [Header("Menus")]
     [SerializeField] private GameObject MenuPrincipal;
     [SerializeField] private GameObject MenuOpcoes;
-    [SerializeField] private GameObject Creditos;
 
     [Header("Slider de Volume")]
     [SerializeField] private Slider sliderVolume;
@@ -17,7 +16,7 @@ public class MenuFuncoes : MonoBehaviour
         // Carrega volume salvo (padrão = 1.0)
         float volumeSalvo = PlayerPrefs.GetFloat("volume", 1f);
 
-        // Evita volume 0 absoluto
+        // Evita volume 0 absoluto (som sumiria por completo)
         if (volumeSalvo < 0.05f)
             volumeSalvo = 0.05f;
 
@@ -39,23 +38,17 @@ public class MenuFuncoes : MonoBehaviour
 
     public void Jogar()
     {
+        SceneManager.LoadScene("Inverno2");
+    }
+
+    public void Outono()
+    {
         SceneManager.LoadScene("Outono");
-    }
-
-    public void AbrirCreditos()
-    {
-        SceneManager.LoadScene("Creditos");
-    }
-
-    public void Inverno()
-    {
-        SceneManager.LoadScene("Inverno");
     }
 
     public void SairJogo()
     {
-        Debug.Log("Saindo do jogo...");
-        Application.Quit();
+        SceneManager.LoadScene("Menu");
     }
 
     public void AbrirOpcoes()
@@ -72,13 +65,15 @@ public class MenuFuncoes : MonoBehaviour
 
     public void AjustarVolume(float volume)
     {
+        // Evita zerar completamente
         if (volume < 0.05f)
             volume = 0.05f;
 
         AudioListener.volume = volume;
-        PlayerPrefs.SetFloat("volume", volume);
+        PlayerPrefs.SetFloat("volume", volume); // Salva
     }
 
+    // (Opcional) Botão para resetar configurações
     public void ResetarVolume()
     {
         PlayerPrefs.DeleteKey("volume");
@@ -87,4 +82,12 @@ public class MenuFuncoes : MonoBehaviour
         if (sliderVolume != null)
             sliderVolume.value = 1f;
     }
+
+    public class MenuBackgroundLoader : MonoBehaviour
+{
+    void Start()
+    {
+        SceneManager.LoadSceneAsync("Fundo", LoadSceneMode.Additive);
+    }
+}
 }

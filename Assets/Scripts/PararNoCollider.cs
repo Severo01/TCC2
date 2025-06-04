@@ -17,7 +17,7 @@ public class PararNoCollider : MonoBehaviour
         if (collision.gameObject == objetoParaParar)
         {
             Debug.Log("Colidiu com o objeto certo! Parando...");
-            rb.velocity = Vector3.zero;
+            rb.linearVelocity = Vector3.zero;
             avalancheScript.velocidade = 0f;
             avalancheScript.podeSeguir = false;
         }
