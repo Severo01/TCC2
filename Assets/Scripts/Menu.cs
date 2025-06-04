@@ -51,6 +51,11 @@ public class MenuFuncoes : MonoBehaviour
         SceneManager.LoadScene("Menu");
     }
 
+    public void AbrirCreditos()
+    {
+        SceneManager.LoadScene("Creditos");
+    }
+
     public void AbrirOpcoes()
     {
         MenuPrincipal.SetActive(false);
