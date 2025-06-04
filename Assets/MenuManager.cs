@@ -93,8 +93,9 @@ public class MenuManager : MonoBehaviour
         Application.Quit();
     }
 
-    public void AjustarVolume(float volume)
+    public void AjustarVolume()
     {
+        float volume = sliderVolume.value;
         if (volume < 0.05f)
             volume = 0.05f;
 
