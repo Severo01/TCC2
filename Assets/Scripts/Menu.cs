@@ -7,7 +7,7 @@ public class MenuFuncoes : MonoBehaviour
     [Header("Menus")]
     [SerializeField] private GameObject MenuPrincipal;
     [SerializeField] private GameObject MenuOpcoes;
-    [SerializeField] private GameObject Créditos;
+    [SerializeField] private GameObject Creditos;
 
     [Header("Slider de Volume")]
     [SerializeField] private Slider sliderVolume;
@@ -17,7 +17,7 @@ public class MenuFuncoes : MonoBehaviour
         // Carrega volume salvo (padrão = 1.0)
         float volumeSalvo = PlayerPrefs.GetFloat("volume", 1f);
 
-        // Evita volume 0 absoluto (som sumiria por completo)
+        // Evita volume 0 absoluto
         if (volumeSalvo < 0.05f)
             volumeSalvo = 0.05f;
 
@@ -42,19 +42,19 @@ public class MenuFuncoes : MonoBehaviour
         SceneManager.LoadScene("Outono");
     }
 
-    public void créditos()
+    public void AbrirCreditos()
     {
         SceneManager.LoadScene("Creditos");
     }
 
     public void Inverno()
     {
-        SceneManager.LoadScene("Inverno2");
+        SceneManager.LoadScene("Inverno");
     }
 
     public void SairJogo()
     {
-         Debug.Log("Saindo do jogo...");
+        Debug.Log("Saindo do jogo...");
         Application.Quit();
     }
 
@@ -70,19 +70,15 @@ public class MenuFuncoes : MonoBehaviour
         MenuPrincipal.SetActive(true);
     }
 
-    public void AjustarVolume()
+    public void AjustarVolume(float volume)
     {
-        float volume = sliderVolume.value;
-        // Evita zerar completamente
         if (volume < 0.05f)
             volume = 0.05f;
 
         AudioListener.volume = volume;
-        PlayerPrefs.SetFloat("volume", volume); // Salva
-        Debug.Log("Novo Volume: " + PlayerPrefs.GetFloat("volume"));
+        PlayerPrefs.SetFloat("volume", volume);
     }
 
-    // (Opcional) Botão para resetar configurações
     public void ResetarVolume()
     {
         PlayerPrefs.DeleteKey("volume");
