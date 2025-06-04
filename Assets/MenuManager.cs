@@ -65,10 +65,11 @@ public class MenuManager : MonoBehaviour
 
     public void AbrirCreditos()
     {
-        Menu.SetActive(false);
-        MenuFases.SetActive(false);
-        MenuConfig.SetActive(false);
-        MenuCreditos.SetActive(true);
+        //Menu.SetActive(false);
+        //MenuFases.SetActive(false);
+        //MenuConfig.SetActive(false);
+        //MenuCreditos.SetActive(true);
+        SceneManager.LoadScene("Creditos");
     }
 
     public void IniciarJogo()

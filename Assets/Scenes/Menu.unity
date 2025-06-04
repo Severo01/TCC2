@@ -201,7 +201,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1132296296}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
         m_MethodName: VoltarMenu
         m_Mode: 1
@@ -212,7 +212,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
 --- !u!114 &31743250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3829,7 +3829,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Menu: {fileID: 1700897290}
   MenuFases: {fileID: 1841386388}
-  MenuCreditos: {fileID: 0}
+  MenuCreditos: {fileID: 2117803171}
   MenuConfig: {fileID: 970366386}
   sliderVolume: {fileID: 44775165}
 --- !u!1 &1186062238
