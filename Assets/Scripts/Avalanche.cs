@@ -6,7 +6,7 @@ public class Avalanche : MonoBehaviour
     public float velocidade = 3f;
     public float delay = 2f;
 
-    private bool podeSeguir = false;
+    public bool podeSeguir = false;
     private Vector3 direcaoFixa;
 
     void Start()
