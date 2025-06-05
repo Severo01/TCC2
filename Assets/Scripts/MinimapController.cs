@@ -20,7 +20,8 @@ public class MinimapController : MonoBehaviour
 
     void Update()
     {
-        AtualizarIcone(iconeJogador, jogador);
+        if(jogador && iconeJogador)
+            AtualizarIcone(iconeJogador, jogador);
         if(inimigo && iconeInimigo)
             AtualizarIcone(iconeInimigo, inimigo);
     }
