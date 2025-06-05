@@ -12,6 +12,7 @@ public class MinimapController : MonoBehaviour
 
     private float distanciaTotal;
 
+
     void Start()
     {
         distanciaTotal = Vector3.Distance(jogador.position, destinoFinal.position);
@@ -20,7 +21,8 @@ public class MinimapController : MonoBehaviour
     void Update()
     {
         AtualizarIcone(iconeJogador, jogador);
-        AtualizarIcone(iconeInimigo, inimigo);
+        if(inimigo && iconeInimigo)
+            AtualizarIcone(iconeInimigo, inimigo);
     }
 
     void AtualizarIcone(RectTransform icone, Transform alvo)
