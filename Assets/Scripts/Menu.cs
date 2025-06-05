@@ -5,80 +5,74 @@ using UnityEngine.UI;
 public class MenuFuncoes : MonoBehaviour
 {
     [Header("Menus")]
-    [SerializeField] private GameObject MenuPrincipal;
-    [SerializeField] private GameObject MenuOpcoes;
+    [SerializeField] private GameObject PainelOpcoes;
 
     [Header("Slider de Volume")]
     [SerializeField] private Slider sliderVolume;
 
+    private bool jogoPausado = false;
+
     void Start()
     {
+        // Garante que o painel de opções está fechado no início
+        if (PainelOpcoes != null)
+            PainelOpcoes.SetActive(false);
+
         // Carrega volume salvo (padrão = 1.0)
         float volumeSalvo = PlayerPrefs.GetFloat("volume", 1f);
-
-        // Evita volume 0 absoluto (som sumiria por completo)
         if (volumeSalvo < 0.05f)
             volumeSalvo = 0.05f;
 
         AudioListener.volume = volumeSalvo;
 
-        // Atualiza valor do slider
         if (sliderVolume != null)
             sliderVolume.value = volumeSalvo;
     }
 
     void Update()
     {
-        // Tecla ESC retorna ao menu principal
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            SceneManager.LoadScene("Menu");
+            if (jogoPausado)
+                RetomarJogo();
+            else
+                AbrirMenuPausa();
         }
     }
 
-    public void Jogar()
+    public void AbrirMenuPausa()
     {
-        SceneManager.LoadScene("Inverno2");
+        if (PainelOpcoes != null)
+            PainelOpcoes.SetActive(true);
+
+        Time.timeScale = 0f; // Pausa o jogo
+        jogoPausado = true;
     }
 
-    public void Outono()
+    public void RetomarJogo()
     {
-        SceneManager.LoadScene("Outono");
+        if (PainelOpcoes != null)
+            PainelOpcoes.SetActive(false);
+
+        Time.timeScale = 1f; // Continua o jogo
+        jogoPausado = false;
     }
 
-    public void SairJogo()
+    public void SairParaMenu()
     {
+        Time.timeScale = 1f; // Garante que o tempo volte ao normal
         SceneManager.LoadScene("Menu");
-    }
-
-    public void AbrirCreditos()
-    {
-        SceneManager.LoadScene("Creditos");
-    }
-
-    public void AbrirOpcoes()
-    {
-        MenuPrincipal.SetActive(false);
-        MenuOpcoes.SetActive(true);
-    }
-
-    public void FecharOpcoes()
-    {
-        MenuOpcoes.SetActive(false);
-        MenuPrincipal.SetActive(true);
     }
 
     public void AjustarVolume(float volume)
     {
-        // Evita zerar completamente
         if (volume < 0.05f)
             volume = 0.05f;
 
         AudioListener.volume = volume;
-        PlayerPrefs.SetFloat("volume", volume); // Salva
+        PlayerPrefs.SetFloat("volume", volume);
     }
 
-    // (Opcional) Botão para resetar configurações
     public void ResetarVolume()
     {
         PlayerPrefs.DeleteKey("volume");
@@ -87,12 +81,4 @@ public class MenuFuncoes : MonoBehaviour
         if (sliderVolume != null)
             sliderVolume.value = 1f;
     }
-
-    public class MenuBackgroundLoader : MonoBehaviour
-{
-    void Start()
-    {
-        SceneManager.LoadSceneAsync("Fundo", LoadSceneMode.Additive);
-    }
-}
 }
