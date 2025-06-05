@@ -9,6 +9,7 @@ TagManager:
   - "ch\xE3o"
   - PlayerBehaviour
   - Avalanche
+  - Inimigo
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - Avalanche
   - Player
   - Coletores
-  - 
+  - Inimigo
   - 
   - 
   - 
