@@ -6,7 +6,7 @@ public class Coletores : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            FindObjectOfType<MusicLayerManager>().AddLayer();
+            FindAnyObjectByType<MusicLayerManager>().AddLayer();
             Destroy(gameObject);
         }
     }
