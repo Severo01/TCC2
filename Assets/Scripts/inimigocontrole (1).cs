@@ -1,6 +1,7 @@
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.Rendering;
+
 
 public class inimigocontrole : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class inimigocontrole : MonoBehaviour
     private enum States { Walking, Attacking };
     [SerializeField] private States currentState;
     private enum Destinations { Player, Pos1, Pos2 };
-    private Destinations currentDestinaton;
+    [SerializeField] private Destinations currentDestinaton;
     [SerializeField] private Vector3 position1 = Vector3.zero;
     [SerializeField] private Vector3 position2 = Vector3.zero;
 
@@ -79,7 +80,7 @@ public class inimigocontrole : MonoBehaviour
         //State logic
         else
         {
-            if (Vector3.Distance(transform.position, agent.destination) <= agent.stoppingDistance + 1.0f)
+            if (Mathf.Abs(transform.position.x - agent.destination.x) <= agent.stoppingDistance + 0.5f)
             {
                 transform.Rotate(0, 180, 0);
                 if (currentDestinaton == Destinations.Pos1)
