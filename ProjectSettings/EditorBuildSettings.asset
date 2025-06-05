@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 1f2b03b3af4127041b1fff2b56d6f210
   - enabled: 1
+    path: Assets/Scenes/Inicio.unity
+    guid: 1734a85b6bebc3147a45bcff2abba6a2
+  - enabled: 1
     path: Assets/Scenes/Outono.unity
     guid: 6a02288541ee28942bdf972102c3c2a7
   - enabled: 1

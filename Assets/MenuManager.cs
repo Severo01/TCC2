@@ -74,7 +74,7 @@ public class MenuManager : MonoBehaviour
 
     public void IniciarJogo()
     {
-        SceneManager.LoadScene("Outono");
+        SceneManager.LoadScene("Inicio");
     }
 
     public void FasesOutono()
