@@ -39852,6 +39852,10 @@ PrefabInstance:
       value: CheckpointCerto
       objectReference: {fileID: 0}
     - target: {fileID: 3862446723559953398, guid: 864258ecc0928bc4caf62d1ad93c3f38, type: 3}
+      propertyPath: promptUI
+      value: 
+      objectReference: {fileID: 638858263}
+    - target: {fileID: 3862446723559953398, guid: 864258ecc0928bc4caf62d1ad93c3f38, type: 3}
       propertyPath: dialogueUI
       value: 
       objectReference: {fileID: 1308210389}
