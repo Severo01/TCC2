@@ -33,7 +33,11 @@ public class MenuManager : MonoBehaviour
         // Tecla ESC retorna ao menu principal
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            SceneManager.LoadScene("Menu");
+            //Verifica se algum outro menu está aberto (verificando se a base do menu está desativada)
+            if (!Menu.activeSelf)
+            {
+                VoltarMenu();
+            }
         }
     }
 
