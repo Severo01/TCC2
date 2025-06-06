@@ -2,13 +2,14 @@ using UnityEngine;
 
 public class PararAvalanche : MonoBehaviour
 {
+    [SerializeField] private GameObject refAvalanche;
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Avalanche")
+        if (other.gameObject.Equals(refAvalanche))
         {
             Debug.Log("PARRROOOOOOO");
             Avalanche avalancheScript = other.gameObject.GetComponent<Avalanche>();
-            avalancheScript.velocidade = 0.0f;
+            avalancheScript.podeSeguir = false;
         }
     }
 }

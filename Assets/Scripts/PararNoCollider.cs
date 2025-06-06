@@ -14,11 +14,9 @@ public class PararNoCollider : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject == objetoParaParar)
+        if (collision.gameObject.Equals(objetoParaParar))
         {
             Debug.Log("Colidiu com o objeto certo! Parando...");
-            rb.linearVelocity = Vector3.zero;
-            avalancheScript.velocidade = 0f;
             avalancheScript.podeSeguir = false;
         }
     }
