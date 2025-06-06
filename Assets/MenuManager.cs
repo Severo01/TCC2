@@ -7,7 +7,6 @@ public class MenuManager : MonoBehaviour
     [Header("Menus")]
     [SerializeField] private GameObject Menu;
     [SerializeField] private GameObject MenuFases;
-    [SerializeField] private GameObject MenuCreditos;
     [SerializeField] private GameObject MenuConfig;
 
     [Header("Slider de Volume")]
@@ -44,7 +43,6 @@ public class MenuManager : MonoBehaviour
         Menu.SetActive(false);
         MenuFases.SetActive(true);
         MenuConfig.SetActive(false);
-        MenuCreditos.SetActive(false);
     }
 
     public void VoltarMenu()
@@ -52,7 +50,6 @@ public class MenuManager : MonoBehaviour
         Menu.SetActive(true);
         MenuFases.SetActive(false);
         MenuConfig.SetActive(false);
-        MenuCreditos.SetActive(false);
     }
 
     public void AbrirConfig()
@@ -60,7 +57,6 @@ public class MenuManager : MonoBehaviour
         Menu.SetActive(false);
         MenuFases.SetActive(false);
         MenuConfig.SetActive(true);
-        MenuCreditos.SetActive(false);
     }
 
     public void AbrirCreditos()
