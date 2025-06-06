@@ -426,8 +426,8 @@ NavMeshAgent:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 141384459}
   m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 2
+  m_AgentTypeID: -1372625422
+  m_Radius: 1.09
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -486,7 +486,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 124
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!114 &141384463
 MonoBehaviour:
@@ -2505,7 +2505,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 124
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!65 &521589119
 BoxCollider:
@@ -2536,8 +2536,8 @@ NavMeshAgent:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 521589115}
   m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_AgentTypeID: -1372625422
+  m_Radius: 1.09
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -5419,8 +5419,8 @@ NavMeshAgent:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1364471412}
   m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 2
+  m_AgentTypeID: -1372625422
+  m_Radius: 1.09
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -5479,7 +5479,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 124
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!114 &1364471416
 MonoBehaviour:
@@ -6308,7 +6308,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5564e6e628acd6d478bbb7f1cf3399bd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.2
+      value: 2.55
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5564e6e628acd6d478bbb7f1cf3399bd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6369,6 +6369,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 5564e6e628acd6d478bbb7f1cf3399bd, type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5564e6e628acd6d478bbb7f1cf3399bd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5564e6e628acd6d478bbb7f1cf3399bd, type: 3}
       propertyPath: m_TagString
@@ -6633,7 +6637,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_SerializedVersion: 0
-  m_AgentTypeID: 0
+  m_AgentTypeID: -1372625422
   m_CollectObjects: 0
   m_Size: {x: 10, y: 10, z: 10}
   m_Center: {x: 0, y: 2, z: 0}
@@ -6856,6 +6860,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 5564e6e628acd6d478bbb7f1cf3399bd, type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5564e6e628acd6d478bbb7f1cf3399bd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5564e6e628acd6d478bbb7f1cf3399bd, type: 3}
       propertyPath: m_TagString
@@ -7206,6 +7214,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 5564e6e628acd6d478bbb7f1cf3399bd, type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5564e6e628acd6d478bbb7f1cf3399bd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5564e6e628acd6d478bbb7f1cf3399bd, type: 3}
       propertyPath: m_TagString
@@ -8140,6 +8152,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Personagem
       objectReference: {fileID: 0}
+    - target: {fileID: 7311328892960024105, guid: 8cea45deafd8f104fb86ecf8ab83f66a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7943468245848095891, guid: 8cea45deafd8f104fb86ecf8ab83f66a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12
@@ -8832,7 +8848,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8164838827897206608, guid: 9afb57b2ec2f9bb48afb4ca797c0e2b7, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8164838827897206608, guid: 9afb57b2ec2f9bb48afb4ca797c0e2b7, type: 3}
       propertyPath: m_TagString
