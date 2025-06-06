@@ -7,21 +7,34 @@ public class Avalanche : MonoBehaviour
     public float delay = 2f;
 
     public bool podeSeguir = false;
-    private Vector3 direcaoFixa;
+    //private Vector3 direcaoFixa;
 
     void Start()
     {
-        Invoke("CalcularDirecao", delay);
+        //Invoke("CalcularDirecao", delay);
+        Invoke("Comecar", delay);
     }
 
     void Update()
     {
+        /*
         if (podeSeguir)
         {
             transform.position += direcaoFixa * velocidade * Time.deltaTime;
         }
+        */
+
+        //Seguir para a direita
+        if (podeSeguir)
+            transform.position += Vector3.right * velocidade * Time.deltaTime;
     }
 
+    void Comecar()
+    {
+        podeSeguir = true;
+    }
+
+    /*
     void CalcularDirecao()
     {
         if (alvo != null)
@@ -32,4 +45,5 @@ public class Avalanche : MonoBehaviour
             podeSeguir = true;
         }
     }
+    */
 }
