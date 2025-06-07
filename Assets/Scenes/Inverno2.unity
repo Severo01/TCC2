@@ -2220,10 +2220,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3273463900482941342, guid: 9d4c740480e7fec4bb7ce6055202f8fc, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 9b06b8aea4ae475448f972f65b5c8af8, type: 2}
     - target: {fileID: 5540177300488013820, guid: 9d4c740480e7fec4bb7ce6055202f8fc, type: 3}
       propertyPath: m_Name
       value: Obstacle
@@ -2232,10 +2228,7 @@ PrefabInstance:
     - {fileID: 2749902327198656227, guid: 9d4c740480e7fec4bb7ce6055202f8fc, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5540177300488013820, guid: 9d4c740480e7fec4bb7ce6055202f8fc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1797586258}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d4c740480e7fec4bb7ce6055202f8fc, type: 3}
 --- !u!1 &425446852
 GameObject:
@@ -6828,24 +6821,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objetoParaParar: {fileID: 425446852}
---- !u!1 &1797586252 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5540177300488013820, guid: 9d4c740480e7fec4bb7ce6055202f8fc, type: 3}
-  m_PrefabInstance: {fileID: 421053069}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1797586258
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1797586252}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31677be38c8601a46a5c848e70b3099e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waitTime: 2
 --- !u!4 &1797586263 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 984728613171664591, guid: 9d4c740480e7fec4bb7ce6055202f8fc, type: 3}
