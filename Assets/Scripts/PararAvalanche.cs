@@ -8,8 +8,11 @@ public class PararAvalanche : MonoBehaviour
         if (other.gameObject.Equals(refAvalanche))
         {
             Debug.Log("PARRROOOOOOO");
-            Avalanche avalancheScript = other.gameObject.GetComponent<Avalanche>();
+            Avalanche avalancheScript = refAvalanche.GetComponent<Avalanche>();
             avalancheScript.podeSeguir = false;
+            ParticleSystem sistemaParticula = refAvalanche.GetComponentInChildren<ParticleSystem>();
+            var spEmission = sistemaParticula.emission;
+            spEmission.enabled = false;
         }
     }
 }
