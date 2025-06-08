@@ -8436,6 +8436,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: E
       objectReference: {fileID: 0}
+    - target: {fileID: 6281383121183061488, guid: 17741e11245e0af479a7c1d8076996ee, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6849088021905571523, guid: 17741e11245e0af479a7c1d8076996ee, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -8659,6 +8663,10 @@ PrefabInstance:
     - target: {fileID: 4884221995489327429, guid: 39a7d0b5478b2f34baa78f572d7db58d, type: 3}
       propertyPath: m_Name
       value: Aperte o E
+      objectReference: {fileID: 0}
+    - target: {fileID: 4884221995489327429, guid: 39a7d0b5478b2f34baa78f572d7db58d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7973875488626293613, guid: 39a7d0b5478b2f34baa78f572d7db58d, type: 3}
       propertyPath: pressEMessage
