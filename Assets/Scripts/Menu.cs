@@ -6,6 +6,7 @@ public class MenuFuncoes : MonoBehaviour
 {
     [Header("Menus")]
     [SerializeField] private GameObject PainelOpcoes;
+     [SerializeField] private GameObject MenuConfig;
 
     [Header("Slider de Volume")]
     [SerializeField] private Slider sliderVolume;
@@ -31,13 +32,39 @@ public class MenuFuncoes : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+    if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (jogoPausado)
-                RetomarJogo();
-            else
-                AbrirMenuPausa();
+        // Se estiver no MenuConfig, volta para o PainelOpcoes
+        if (MenuConfig.activeSelf)
+            {
+            MenuConfig.SetActive(false);
+            PainelOpcoes.SetActive(true);
+            }
+        // Se estiver no PainelOpcoes, fecha tudo e volta ao jogo
+        else if (PainelOpcoes.activeSelf)
+            {
+            RetomarJogo();
+            }
+        // Se nada estiver aberto, abre o menu de pausa
+        else
+            {
+            AbrirMenuPausa();
+            }
         }
+    }
+
+
+      public void AbrirConfig()
+    {
+        if (PainelOpcoes != null)
+        PainelOpcoes.SetActive(false);
+        MenuConfig.SetActive(true);
+    }
+
+    public void VoltarParaOpcoes()
+    {
+    MenuConfig.SetActive(false);
+    PainelOpcoes.SetActive(true);
     }
 
     public void AbrirMenuPausa()
