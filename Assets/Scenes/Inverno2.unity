@@ -17296,7 +17296,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 69854839336957047, guid: b7b738b608fc96c4aaa9de0c26f93fe1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 8
+      value: 21.72
       objectReference: {fileID: 0}
     - target: {fileID: 69854839336957047, guid: b7b738b608fc96c4aaa9de0c26f93fe1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -17329,6 +17329,26 @@ PrefabInstance:
     - target: {fileID: 1114665252556058991, guid: b7b738b608fc96c4aaa9de0c26f93fe1, type: 3}
       propertyPath: m_Name
       value: SnowflakeParticle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1578829817129785692, guid: b7b738b608fc96c4aaa9de0c26f93fe1, type: 3}
+      propertyPath: m_MaxParticleSize
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1578829817129785692, guid: b7b738b608fc96c4aaa9de0c26f93fe1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e81d59e14c74db64ca8d8cf6859e6822, type: 2}
+    - target: {fileID: 8864084578561971123, guid: b7b738b608fc96c4aaa9de0c26f93fe1, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8864084578561971123, guid: b7b738b608fc96c4aaa9de0c26f93fe1, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8864084578561971123, guid: b7b738b608fc96c4aaa9de0c26f93fe1, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
