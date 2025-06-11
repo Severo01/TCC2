@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Movimento : MonoBehaviour
 {
+    public bool pegouNota = false;
+
     private Animator animator;
     public float moveSpeed = 10f;
     public float jumpForce = 15f;
