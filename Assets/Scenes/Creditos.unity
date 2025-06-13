@@ -1977,14 +1977,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\t\tDesenvolvedores:\nAna Beatriz ()-Designer e Documentadora.\n\nMaria
-    Eduarda da Silva Oliveira (0040962223013)-Diretora criativa, Designer e documentadora.\n\nYago
-    Felipi de Moura Machado (0040962223005)-Diretor de Audiovisual, Programador e
-    Documentador.\n\n\nProjeto orientado por Jos\xE9 William Pinto Gomes.\n\n\nEsse
-    jogo foi desenvolvido com parte das exig\xEAncias para a obten\xE7\xE3o do t\xEDtulo
-    de Tecn\xF3logo em Jogos Digitais pela faculdade de Tecnologia de Americana (Fatec
-    Americana). Seus autores diponibilizam livre de direitos autorais para fins n\xE3o
-    comerciais. "
+  m_text: "\t\tDesenvolvedores:\n\nAna Beatriz Camilo da Silva (0040962223002)-Designer
+    e Documentadora.\n\nMaria Eduarda da Silva Oliveira (0040962223013)-Diretora
+    criativa, Designer e documentadora.\n\nYago Felipi de Moura Machado (0040962223005)-Diretor
+    de Audiovisual, Programador e Documentador.\n\n\nProjeto orientado por Jos\xE9
+    William Pinto Gomes.\n\n\nEsse jogo foi desenvolvido com parte das exig\xEAncias
+    para a obten\xE7\xE3o do t\xEDtulo de Tecn\xF3logo em Jogos Digitais pela faculdade
+    de Tecnologia de Americana (Fatec Americana). Seus autores diponibilizam livre
+    de direitos autorais para fins n\xE3o comerciais. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 14f40985a4ddec9439ac33e5b998f497, type: 2}
   m_sharedMaterial: {fileID: -7914304279261257942, guid: 14f40985a4ddec9439ac33e5b998f497, type: 2}
